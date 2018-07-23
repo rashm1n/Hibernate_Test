@@ -8,26 +8,23 @@ import java.util.Date;
 
 public class HBMain {
     public static void main(String[] args) {
-        Employee1 emp = new Employee1();
-        emp.setName("hash");
-        emp.setRole("CEO");
-        emp.setInsertTime(new Date());
+        Employee1 empp = new Employee1();
+        empp.setName("hasdsdhgsdg");
+        empp.setRole("CEOdsss");
+        empp.setInsertTime(new Date());
+        Employee1 eee = null;
 
 
-        //Get Session
-        Session session = HibernateUtil.getSessionAnnotationFactory().getCurrentSession();
-
-        //start transaction
-        session.beginTransaction();
-
-        //Save the Model object
-        session.save(emp);
-
-        //Commit transaction
-        session.getTransaction().commit();
-        System.out.println("Employee ID="+emp.getId());
-
-        //terminate session factory, otherwise program won't end
+        Session ses = HibernateUtil.getSessionAnnotationFactory().getCurrentSession();
+            // Create a transaction and start it
+        Transaction tx = ses.getTransaction();
+        tx.begin();
+//        ses.save(empp);
+         eee = (Employee1)ses.get(Employee1.class,20);
+            // Do your database operations with the session
+            // Once done, commit the transaction and session
+        tx.commit();
         HibernateUtil.getSessionAnnotationFactory().close();
+        System.out.println(eee.getName());
     }
 }
