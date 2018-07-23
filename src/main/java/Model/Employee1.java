@@ -1,7 +1,10 @@
 package Model;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Employee",uniqueConstraints = {@UniqueConstraint(columnNames = {"ID"})})
@@ -20,6 +23,11 @@ public class Employee1 {
 
     @Column(name="insert_time", nullable=true)
     private Date insertTime;
+
+    @OneToMany
+    @JoinColumn(name = "ID")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    private List<Child> children = null;
 
     public int getId() {
         return id;
