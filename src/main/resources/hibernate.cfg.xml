@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
@@ -8,16 +7,16 @@
 
         <!-- Database connection properties - Driver, URL, user, password -->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost/TestDB</property>
-        <property name="hibernate.connection.username">pankaj</property>
-        <property name="hibernate.connection.password">pankaj123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/jpadb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">rashmin1995</property>
 
 
         <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
         <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- Mapping with model class containing annotations -->
-        <mapping class="com.journaldev.hibernate.model.Employee1"/>
+        <mapping class="Model.Employee1"/>
 
     </session-factory>
 </hibernate-configuration>

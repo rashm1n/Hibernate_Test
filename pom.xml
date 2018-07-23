@@ -8,12 +8,15 @@
     <artifactId>hitest1</artifactId>
     <version>1.0-SNAPSHOT</version>
 <dependencies>
+
+<!--Hibernate dependancy Maven-->
     <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
         <version>4.3.5.Final</version>
     </dependency>
     <!-- Hibernate 4 uses Jboss logging, but older versions slf4j for logging -->
+
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-simple</artifactId>
@@ -22,7 +25,7 @@
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
-        <version>5.0.5</version>
+        <version>5.1.44</version>
     </dependency>
 </dependencies>
 
