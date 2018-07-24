@@ -24,10 +24,7 @@ public class Employee1 {
     @Column(name="insert_time", nullable=true)
     private Date insertTime;
 
-    @OneToMany
-    @JoinColumn(name = "ID")
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private List<Child> children = null;
+
 
     public int getId() {
         return id;

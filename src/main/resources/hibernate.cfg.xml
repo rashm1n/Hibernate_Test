@@ -10,13 +10,15 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost/jpadb</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">rashmin1995</property>
-
+        <property name="hbm2ddl.auto">update</property>
 
         <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
         <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- Mapping with model class containing annotations -->
         <mapping class="Model.Employee1"/>
+        <mapping class="Model.Showroom"/>
+        <mapping class="Model.Car"/>
 
     </session-factory>
 </hibernate-configuration>
